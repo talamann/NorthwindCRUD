@@ -1,0 +1,167 @@
+﻿@model IEnumerable<WebApplication2.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantityPerUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitsInStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitsOnOrder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReorderLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Discontinued)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier_CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier_ContactName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier_ContactTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier_Address_Street)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier_Address_City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier_Address_Region)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier_Address_PostalCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier_Address_Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier_Address_Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category_Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category_Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantityPerUnit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitsInStock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitsOnOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReorderLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discontinued)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier_CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier_ContactName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier_ContactTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier_Address_Street)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier_Address_City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier_Address_Region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier_Address_PostalCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier_Address_Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier_Address_Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category_Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category_Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
